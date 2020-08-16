@@ -1,7 +1,7 @@
 <?php
 function console_log( $string ){
   echo '<script>';
-  echo 'console.log(".  $string  .")';
+  echo 'console.log("' .  $string  . '")';
   echo '</script>';
 }
 
