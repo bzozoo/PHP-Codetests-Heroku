@@ -65,4 +65,6 @@ for($i = 0; $i < primesForPerfect.length; $i++){
   //$result = Math.pow(2, $primesForPerfect[$i] - 1) * (Math.pow(2, $primesForPerfect[$i]) - 
     $perfectNumbers.push($result);
 }
+
+var_dump($perfectNumbers);
 ?>
