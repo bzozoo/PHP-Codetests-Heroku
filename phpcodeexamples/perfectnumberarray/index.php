@@ -65,5 +65,7 @@ for($i = 0; $i < count($primesForPerfect); $i++){
   $perfectNumbers[$i] = $result;
 }
 
-var_dump($perfectNumbers);
+echo "<pre>";
+print_r($perfectNumbers);
+echo "<pre>";
 ?>
