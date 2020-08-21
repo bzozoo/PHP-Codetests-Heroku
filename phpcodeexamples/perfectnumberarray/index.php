@@ -61,7 +61,7 @@ $perfectNumbers = array();
 $result;
 
 for($i = 0; $i < count($primesForPerfect); $i++){
-  $result = pow(2, $primesForPerfect[$i] - 1) * pow(2, $primesForPerfect[$i]) - 1;
+  $result = pow(2, $primesForPerfect[$i] - 1) * (pow(2, $primesForPerfect[$i]) - 1);
   $perfectNumbers[$i] = $result;
 }
 
