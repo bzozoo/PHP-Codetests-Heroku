@@ -2,7 +2,7 @@
 
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
-sjsj
+
 $primesForPerfect = [
   2,
   3,
@@ -63,7 +63,7 @@ $result;
 for($i = 0; $i < primesForPerfect.length; $i++){
     $result = $i;  
   //$result = Math.pow(2, $primesForPerfect[$i] - 1) * (Math.pow(2, $primesForPerfect[$i]) - 
-    $perfectNumbers.push($result);
+  array_push($perfectNumbers, $result);
 }
 
 var_dump($perfectNumbers);
