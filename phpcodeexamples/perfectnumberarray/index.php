@@ -55,8 +55,6 @@ $primesForPerfect = [
   82589933
 ];
 
-var_dump($primesForPerfect);
-
 $perfectNumbers = [];
 $result;
 
