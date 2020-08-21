@@ -60,7 +60,7 @@ $primesForPerfect = [
 $perfectNumbers = array();
 $result;
 
-for($i = 0; $i < primesForPerfect.length; $i++){
+for($i = 0; $i < $primesForPerfect.length; $i++){
     $result = $i;  
   //$result = Math.pow(2, $primesForPerfect[$i] - 1) * (Math.pow(2, $primesForPerfect[$i]) - 
   $perfectNumbers[$i] = $result;
