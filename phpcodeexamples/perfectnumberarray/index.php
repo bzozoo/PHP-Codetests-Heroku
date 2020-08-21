@@ -57,7 +57,7 @@ $primesForPerfect = [
   82589933
 ];
 
-$perfectNumbers = [];
+$perfectNumbers = array();
 $result;
 
 for($i = 0; $i < primesForPerfect.length; $i++){
