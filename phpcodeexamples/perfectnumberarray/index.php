@@ -1,7 +1,5 @@
 <?php 
 
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
 
 $primesForPerfect = [
   2,
@@ -63,7 +61,8 @@ $perfectNumbers = [];
 $result;
 
 for($i = 0; $i < primesForPerfect.length; $i++){
-    $result = Math.pow(2, $primesForPerfect[$i] - 1) * (Math.pow(2, $primesForPerfect[$i]) - 
-    perfectNumbers.push(result);
+    $result = $i;  
+  //$result = Math.pow(2, $primesForPerfect[$i] - 1) * (Math.pow(2, $primesForPerfect[$i]) - 
+    $perfectNumbers.push($result);
 }
 ?>
