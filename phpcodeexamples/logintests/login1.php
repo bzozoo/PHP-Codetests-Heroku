@@ -29,7 +29,7 @@ if(isset($_POST['btnlogin']))
 } 
 else
 {
-   $msg = "<p>Nem küldtél be adatokat</p>";
+   $msg = "<p>Nem küldtél be adatokat!</p> <p>A scriptnek HTML form készítésével tudsz username és password értéket küldeni btnlogin nevezetű submit gombbal POST metódussal </p> ";
    echo $msg;
 }
 ?>
