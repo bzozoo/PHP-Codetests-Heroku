@@ -26,5 +26,10 @@ if(isset($_POST['btnlogin']))
         }
     }
     echo $msg;
+} 
+else
+{
+   $msg = "<p>Nem küldtél be adatokat</p>";
+   echo $msg;
 }
 ?>
