@@ -30,7 +30,7 @@ if(isset($_POST['btnlogin']))
 else
 {
    $msg = "<p>Nem küldtél be adatokat!</p> <p>A scriptnek HTML form készítésével tudsz username és password értéket küldeni btnlogin nevezetű submit gombbal POST metódussal </p> 
-           <p>3 felhasználónév és jelszó fogad el a script, erre írja ki, hogy a belépés sikeres. Ezt a 3 felhasználónév és jelszó párost a Facebook csoportban <a href='https://www.facebook.com/groups/ujratervezesprogram/permalink/658237725058586/' target='blank'>megadtam</a>.</p>";
+           <p>3 felhasználónevet és jelszót fogad el a script, erre írja ki, hogy a belépés sikeres. Ezt a 3 felhasználónév és jelszó párost a Facebook csoportban <a href='https://www.facebook.com/groups/ujratervezesprogram/permalink/658237725058586/' target='blank'>megadtam</a>.</p>";
    echo $msg;
 }
 ?>
