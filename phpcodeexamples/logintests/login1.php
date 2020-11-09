@@ -9,8 +9,8 @@ $users["Jozsi"] = "jozsibelep";
 
 if(isset($_POST['btnlogin']))
 {
-    $uname = $_POST['unsername'];
-    $pass = $_POST['passrord'];
+    $uname = $_POST['username'];
+    $pass = $_POST['password'];
     foreach($users as $username => $password) 
     {
         if($username == $uname && $password == $pass) 
