@@ -1,4 +1,4 @@
-
+<?php
 $users = array();
 $users["admin"] = "admin";
 $users["Zoltan"] = 12345;
@@ -27,3 +27,4 @@ if(isset($_POST['btnlogin']))
     }
     echo $msg;
 }
+?>
