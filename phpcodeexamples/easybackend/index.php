@@ -1,0 +1,24 @@
+<?php
+
+header("Access-Control-Allow-Origin: *");
+header('Content-Type: application/json');
+
+if(isset($_POST['kapottadat'])){
+	
+	$kapottSzamAdat = $_POST['kapottadat'];
+	$data = Array(
+	    'Dupla' => $kapottSzamAdat * 2,
+		'Felez' => $kapottSzamAdat / 2,
+		'Hozzaad' => $kapottSzamAdat + 1,
+		'Levon' => $kapottSzamAdat -1,
+		'Hello' => "Hello " . $kapottSzamAdat . "!",
+		'Visszakap' => $kapottSzamAdat
+	);
+	
+	echo json_encode($data, JSON_PRETTY_PRINT);
+} else {
+	$data = Array(
+	'Error' => 'Error'
+	);
+	echo json_encode($data, JSON_PRETTY_PRINT);
+}
