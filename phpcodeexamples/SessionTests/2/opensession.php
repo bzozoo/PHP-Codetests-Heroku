@@ -19,15 +19,15 @@ session_id($thesessionid);
 session_start();
 
 if(isset($_SESSION["SessionTime"]) || isset($_SESSION["SessionValue"])){
-$data = Array("DataQuery" => "Success", "ActualSessionID" => session_id(), "SessionTime" => $_SESSION["SessionTime"], "SessionValue" => $_SESSION["SessionValue"]);
+$data = Array("DataQuery" => "Success", "ActualSessionID" => session_id(), "SessionTime" => $_SESSION["SessionTime"],  "SessionUserName" => $_SESSION["SessionUname"], "SessionValue" => $_SESSION["SessionValue"]);
 } else {
-	$data = Array("DataQuery" => "Failed","ActualSessionID" => "Failed", "SessionTime" => "Failed", "SessionValue" => "Failed");
+	$data = Array("DataQuery" => "Failed","ActualSessionID" => "Failed", "SessionTime" => "Failed", "SessionUserName" => "Failed", "SessionValue" => "Failed");
 }
 
 
 } else {
 
-$data = Array("DataQuery" => "Failed","ActualSessionID" => "Failed", "SessionTime" => "Failed", "SessionValue" => "Failed");
+$data = Array("DataQuery" => "Failed","ActualSessionID" => "Failed", "SessionTime" => "Failed",  "SessionUserName" => "Failed", "SessionValue" => "Failed");
 }
 
 echo json_encode($data);
