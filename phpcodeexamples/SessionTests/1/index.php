@@ -1,8 +1,14 @@
 <?php
+
+
 session_start();
 
-$_SESSION["teszts"] = "Ez új egy teszt érték!";
+$_SESSION["SessionTime"] = time();
 
-$_SESSION["teszts2"] = "Ez egy másik teszt érték!";
+$_SESSION["SessionValue"] = "Ez egy teszt érték!";
 
-echo "S_SESSION [teszts] = " . $_SESSION['teszts'] . " - S_SESSION [teszts2] = " . $_SESSION['teszts2'];
+$data = Array("SessionID" => session_id(), "SessionTime" => $_SESSION["SessionTime"], "SessionValue" => $_SESSION["SessionValue"]);
+
+header("Access-Control-Allow-Origin: *");
+header('Content-Type: application/json');
+echo json_encode($data);
