@@ -5,7 +5,7 @@
 header("Access-Control-Allow-Origin: *");
 header('Content-Type: application/json');
 
-if(isset($_POST['kapottadat'])){
+if(isset($_POST['kapottadat']) && is_numeric($_POST['kapottadat'])){
 	
 	$kapottSzamAdat = $_POST['kapottadat'];
 	$data = Array(
@@ -14,13 +14,14 @@ if(isset($_POST['kapottadat'])){
 		'Hozzaad' => $kapottSzamAdat + 1,
 		'Levon' => $kapottSzamAdat -1,
 		'Hello' => "Hello " . $kapottSzamAdat . "!",
-		'Visszakap' => $kapottSzamAdat
+		'Visszakap' => $kapottSzamAdat,
+		'Error' => false
 	);
 	
 	echo json_encode($data, JSON_PRETTY_PRINT);
 } else {
 	$data = Array(
-	'Error' => 'Error'
+	'Error' => true
 	);
 	echo json_encode($data, JSON_PRETTY_PRINT);
 }
