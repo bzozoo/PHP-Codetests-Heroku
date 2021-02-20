@@ -1,4 +1,6 @@
 <?php
+// Frontend script for this backend
+// https://codepen.io/bzozoo/pen/yLVoQxo?editors=0010
 
 header("Access-Control-Allow-Origin: *");
 header('Content-Type: application/json');
