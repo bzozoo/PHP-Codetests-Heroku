@@ -11,4 +11,4 @@ $data = Array("SessionID" => session_id(), "SessionTime" => $_SESSION["SessionTi
 
 header("Access-Control-Allow-Origin: *");
 header('Content-Type: application/json');
-echo json_encode($data);
+echo json_encode($data, JSON_PRETTY_PRINT);

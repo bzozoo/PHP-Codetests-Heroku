@@ -22,4 +22,4 @@ $data = Array("DataQuery" => "Success", "ActualSessionID" => session_id(), "Sess
 $data = Array("DataQuery" => "Failed","ActualSessionID" => "Failed", "SessionTime" => "Failed", "SessionValue" => "Failed");
 }
 
-echo json_encode($data);
+echo json_encode($data, JSON_PRETTY_PRINT);
