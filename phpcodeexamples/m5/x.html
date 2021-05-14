@@ -1,0 +1,17 @@
+<html>
+	<head></head>
+	<body>
+<script>
+fetch('https://scriptteszt.mysqhost.tk/php/m5/?number=333',  {
+    method: "GET",
+    mode: "no-cors",
+    cache: "no-cache"}
+)
+.then(response => response.json())
+.then(function(data){
+   console.log(data)
+   document.body.innerHTML = data.numberplus
+} );
+</script>
+</body>
+</html>
