@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Firebase\JWT\JWT;
+use Firebase\JWT\ExpiredException;
 
 require_once('./vendor/autoload.php');
 
@@ -10,14 +11,25 @@ if(isset($_POST['jwttoken'])){
 
 $jwt = $_POST['jwttoken'];
 $secretKey  = '521016A2CE756433E88135DC833458ED3DD5941DE87EDCC20662E322922F67B5AE27BD687CACF8AC4473ED7525215E91DF4194651D55FE0D6E9768A7B56A38E9';
+try{
 $token = JWT::decode($jwt, $secretKey, ['HS512']);
+}catch(\Firebase\JWT\ExpiredException $e){
+	 header('HTTP/1.1 401 Unauthorized');
+     echo 'Caught exception: ',  $e->getMessage(), "\n";
+
+     exit;
+}
+
 $now = new DateTimeImmutable();
 
+
+if(isset($token)){
 if ($token->nbf > $now->getTimestamp() ||
     $token->exp < $now->getTimestamp())
 {
     header('HTTP/1.1 401 Unauthorized');
     exit;
+}
 }
 //header('Content-type: application/json');
 //echo json_encode($token, JSON_PRETTY_PRINT);
