@@ -10,25 +10,22 @@ $errorMessage = "We could not get any data";
 
 if(isset($_POST['chkTok'])) {
 
-foreach (getallheaders() as $name => $value) {
-    if($name === 'Bearer'){
-		$gettedjwt = $value;
-	}
-}
+$headers = getallheaders();
+$headerAuth = substr($headers['Authorization'], 7);
 
-//foreach (getallheaders() as $name => $value) {  
-	//	echo '{"'. $name . '":"'. $value . '"},';
-//}
-
-if(!isset($gettedjwt)){
+if(!isset($headerAuth)){
 	$errorMessage = "Bearer not found in header";
 }
-if(isset($gettedjwt)){
+
+if(isset($headerAuth)){
 try{
 
-$User = $Token->checkToken($gettedjwt);
+$User = $Token->checkToken($headerAuth);
 $dashpanel = true;
 $actualUserName = $User->userName;
+$actualUserSecret = $User->userSecret;
+$actualUserNbf = date('Y.M.d H:i:s', $User->nbf);
+$actualUserExp = date('Y.M.d H:i:s', $User->exp);
 
 }catch(\Firebase\JWT\ExpiredException $e){
 	 $errorMessage = $e->getMessage();

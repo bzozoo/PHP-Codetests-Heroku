@@ -19,12 +19,22 @@ if($tokenError){
 }
 
 if($getTokenIfLoginSuccess){
-	echo json_encode(json_decode('{"Login": "Success", "UTOK": "' .  $token . '", "Error": "false"}'), JSON_PRETTY_PRINT);
+	echo json_encode(json_decode('{
+		"Login": "Success",
+		"UTOK": "' .  $token . '",
+		"Error": "false"
+	}'), JSON_PRETTY_PRINT);
 	exit;
 }
 
 if($dashpanel){
-	echo json_encode(json_decode('{"UserName": "' . $actualUserName .'", "Error": "false"}'), JSON_PRETTY_PRINT);
+	echo json_encode(json_decode('{
+		"UserName": "' . $actualUserName .'",
+		"UserSecret": "' . $actualUserSecret .'",
+		"UserLoggedInAt": "' . $actualUserNbf .'",
+		"UserExp": "' . $actualUserExp .'",
+		"Error": "false"}
+	'), JSON_PRETTY_PRINT);
 	exit;
 }
 
