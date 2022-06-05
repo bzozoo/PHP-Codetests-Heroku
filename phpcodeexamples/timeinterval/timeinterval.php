@@ -5,3 +5,4 @@ for($i=0; $i<10; $i++){
   echo ($i + 1) ." - ". $date. " OK <br />";
   sleep(3);
 }
+?>
