@@ -14,13 +14,13 @@ echo '<br />';
 
 // WITH INDEX
 $rand1 = rand(1000, 20000000);
-echo '<a href="/index.php?page=tesztpage&oldal=' . $rand1 . '" />/index.php?page=tesztpage&oldal=' . $rand1 . '5</a>';
+echo '<a href="/index.php?page=ingatlan&oldal=' . $rand1 . '" />/index.php?page=ingatlan&oldal=' . $rand1 . '5</a>';
 echo '<br />';
 echo '<br />';
 
 //WITHOUT INDEX
 $rand2 = rand(1000, 20000000);
-echo '<a href="/?page=tesztpage&oldal=' . $rand2 . '" />/?page=tesztpage&oldal=' . $rand1 . '</a>';
+echo '<a href="/?page=ingatlan&oldal=' . $rand2 . '" />/?page=ingatlan&oldal=' . $rand1 . '</a>';
 echo '<br />';
 echo '<br />';
 
