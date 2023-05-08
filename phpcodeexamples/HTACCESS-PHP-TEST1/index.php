@@ -38,13 +38,13 @@ echo '<br />';
 
 //PRETTY WITH PAGE
 $rand4 = rand(1000, 20000000);
-echo '<a href="/tesztoldal/' . $rand4 . '" />/tesztoldal/' . $rand4 . '</a>';
+echo '<a href="/tesztoldal/oldal-' . $rand4 . '" />/tesztoldal/oldal-' . $rand4 . '</a>';
 echo '<br />';
 echo '<br />';
 
 //PRETTY WITH PAGE 2
 $rand5 = rand(1000, 20000000);
-echo '<a href="/masikoldal/' . $rand5 . '" />/masikoldal/' . $rand5 . '</a>';
+echo '<a href="/masikoldal/oldal-' . $rand5 . '" />/masikoldal/oldal-' . $rand5 . '</a>';
 echo '<br />';
 echo '<br />';
 
