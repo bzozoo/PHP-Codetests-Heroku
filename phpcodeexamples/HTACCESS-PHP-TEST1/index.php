@@ -44,13 +44,19 @@ echo '<br />';
 
 //PRETTY WITH PAGE 2
 $rand5 = rand(1000, 20000000);
-echo '<a href="/masikoldal/oldal-' . $rand5 . '" />/masikoldal/oldal-' . $rand5 . '</a>';
+echo '<a href="/lakas/oldal-' . $rand5 . '" />/lakas/oldal-' . $rand5 . '</a>';
+echo '<br />';
+echo '<br />';
+
+//PRETTY WITH AZONOSITO
+$rand5a = rand(1000, 20000000);
+echo '<a href="/telek-vagy-referens-vagy-ingatlan/azonosito-' . $rand5a . '" />/telek-vagy-referens-vagy-ingatlan/azonosito-' . $rand5a . '</a>';
 echo '<br />';
 echo '<br />';
 
 //PRETTY SZIMPLA
 $rand6 = rand(1000, 20000000);
-echo '<a href="/szimplaoldal' . $rand6 . '" />/szimplaoldal' . $rand6 . '</a>';
+echo '<a href="/lakas' . $rand6 . '" />/lakas' . $rand6 . '</a>';
 echo '<br />';
 echo '<br />';
 
